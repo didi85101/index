@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hi~ 你好！请登录！</title>
+    <link rel="stylesheet" href="./denglu.css">
+    <style type="text/css">
+
+    </style>
+    <script>
+        function check() {
+            var name = document.getElementById("name").value;
+            var pass = document.getElementById("pass").value;
+            if (name == "1" && pass == "1") {
+                alert("登入成功");
+                window.location.href = "1.html";
+                // window.document.f.action="Untitled-4.html";
+                // window.document.f.submit();
+            }
+            else {
+                alert("用户名或密码错误");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="top">
+        <div class="logo">
+            <img src="./logo.png" alt="logo" width="68px">
+        </div>
+        <div class="x">
+            <li><a href="../1.html">首页</a></li>
+            <li class="line"></li>
+            <li><a href="./zs.html">动画</a></li>
+            <li class="line"></li>
+            <li>
+            <a href="./zhanshi.html">小僵尸</a></li>
+            <li class="line"></li>
+            <div class="bz">
+                <li>帮助与支持</li>
+                <li><a href="./Untitled-2.html" target="_blank">联系我们</a></li>
+                <li><a href="./gy.html">关于我们</a></li>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="fuwu-wai">
+            <div class="fuwu">
+                
+            </div>
+            <div class="list">
+            </div> -->
+    </div>
+    </div>
+    </div>
+
+    <div class="denglu">
+        <div class="denglu-top">
+            <li>密码登录</li>
+            <li class="line-01"></li>
+        </div>
+        <div class="denglu-nei">
+            <input class="a" type="text" placeholder="账号 -->账号密码均为1" id="name">
+            <input class="b" type="password" placeholder="密码 -->账号密码均为1" id="pass"><br>
+            <input class="c" type="button" value="登录" onclick="check()">
+        </div>
+    </div>
+
+    <div class="imgBox">
+        <img class="img-slide img1" src="./lunbo01.png" alt="1">
+        <img class="img-slide img2" src="./lunbo02.png" alt="2">
+        <img class="img-slide img3" src="./lunbo03.png" alt="3">
+    </div>
+</body>
+<script type="text/javascript">
+    var index = 0;
+    //效果
+    function ChangeImg() {
+        index++;
+        var a = document.getElementsByClassName("img-slide");
+        if (index >= a.length) index = 0;
+        for (var i = 0; i < a.length; i++) {
+            a[i].style.display = 'none';
+        }
+        a[index].style.display = 'block';
+    }
+    //设置定时器，每隔两秒切换一张图片
+    setInterval(ChangeImg, 2000);
+</script>
+</body>
+
+</html>

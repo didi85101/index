@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画-左上右下</title>
+    <style>
+        body{
+            background-color: #08ECD9;
+        }
+        .whole{
+            width: 600px;
+            height: 600px;
+            margin: 100px auto;
+            border: 1px solid #1E1E1E;
+        }
+        .xiao{
+            width: 100px;
+            height: 100px;
+            background-color: #E06D6D;
+            border-radius: 100%;
+            transform: translate(500%,500%);
+            animation: left-top-right-bottom 5s linear infinite;
+        }
+        @keyframes left-top-right-bottom{
+            25%{
+                transform: translate(0%,500%);
+                border-radius: 0%;
+                background-color: #A6C244;
+            }
+            50%{
+                transform: translate(0%,0%);
+                border-radius: 0%;
+                background-color: #95DA3A;
+            }
+            75%{
+                transform: translate(500%,0%);
+                border-radius: 50%;
+                background-color: #C8905C;
+            }
+            100%{
+                transform: translate(500%,500%);
+                border-radius: 100%;
+                background-color: #95DA3A;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="whole">
+        <div class="xiao"></div>
+    </div>
+</body>
+</html>

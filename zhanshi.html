@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 小僵尸 </title>
+   <style>
+       *{
+           margin: 0;
+           padding: 0;
+       }
+       .box{
+           margin: 0 auto;
+           width: 200px;
+           height: 312px;
+           background: url(./033.png) no-repeat;
+           /* 放入图片 */
+           animation: js 1s steps(10) infinite;
+            /* 该行代码详情可看前面博客css3知识点总结03动画相关内容 */
+       }
+       /* 定义动画关键帧 */
+       @keyframes js{
+           from{
+               background-position: 0 0;
+           }
+           to{
+               background-position: -2000px 0;
+                /*定义背景图位置，详情看css知识点04*/
+           }
+       }
+   </style>
+</head>
+<body>
+    <div class="box">
+ 
+    </div>
+</body>
+</html>
